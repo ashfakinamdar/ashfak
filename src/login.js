@@ -20,6 +20,10 @@ class login extends React.Component {
     };
   }
 
+  componentDidMount = () => {
+    console.log("dv", this.props);
+  };
+
   handleUsernameChange = (e) => {
     this.setState({ username: e.target.value });
   };
@@ -42,7 +46,7 @@ class login extends React.Component {
       this.setState({ errorPassword: true });
     }
     if (username.toLocaleLowerCase() === "admin" && password === "1234") {
-      this.props.history.push("./");
+      this.props.history.push("./dashboard");
     }
   };
 
