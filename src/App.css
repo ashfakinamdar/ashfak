@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 
 .backgound {
-  background-color: #f8f9fd;
+  background-image: url("./Assets/OXavm4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
 }
 .loginBox {
