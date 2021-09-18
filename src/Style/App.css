@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
+/* 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 */
 .backgound {
   /* background-image: url("./Assets/OXavm4.jpg"); */
   background-repeat: no-repeat;
@@ -8,12 +8,12 @@
   height: 100vh;
 }
 .gridBackground {
-  background-image: url("./Assets/OXavm4.jpg");
+  background-image: url("../Assets/OXavm4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 .loginBox {
-  height: 410px;
+  height: 500px;
   background-color: white;
   width: 700px;
   margin: 0;
@@ -22,7 +22,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  box-shadow: 0px 10px 34px -15px rgb(0 0 0 / 24%);
+  box-shadow: 0px 6px 40px -1px rgb(0 0 0 / 24%);
 }
 .header {
   height: 100px;
@@ -55,7 +55,12 @@
 .passwordView {
   position: absolute;
   right: 8px;
-  top: 29%;
+  top: 27%;
+}
+.passwordView2 {
+  position: absolute;
+  right: 8px;
+  top: 30%;
 }
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
   height: 16px !important;
@@ -63,14 +68,12 @@
 .css-i7rae6-MuiList-root {
   height: 100vh;
 }
-.MuiGrid-container {
-  height: 100%;
-}
+
 .loginText {
   font-family: "Lobster", cursive;
   color: white;
   font-size: 40px;
-  margin: 100px 0px 0px 30px;
+  margin: 160px 0px 0px 30px;
 }
 .helperText {
   font-family: "Noto Sans", sans-serif;
@@ -102,4 +105,44 @@
 }
 .MuiFormControl-root {
   width: 100% !important;
+}
+.textAlignCenter .loginButton {
+  background-color: #c62828 !important;
+  margin-top: 20px !important;
+}
+.height100 {
+  height: 100% !important;
+}
+.textAlignCenter .loginButton:hover,
+.textAlignCenter .loginButton:focus {
+  background-color: white !important;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
+.forgotText {
+  margin: 10px 0px 10px 0px !important;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+}
+.mt-0 {
+  margin-top: 0px !important;
+}
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+.iconPadding {
+  padding: 0px 95px;
+}
+.css-i7rae6-MuiList-root {
+  max-width: 260px !important;
+}
+.MuiList-subheader {
+  box-shadow: 0px 6px 40px -1px rgb(0 0 0 / 24%);
+}
+.flexLogin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

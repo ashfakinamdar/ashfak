@@ -1,22 +1,24 @@
 import React, { Component } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
-import loginMain from "./login";
-import dashboard from "./dashboard";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import login from "./Components/login";
+import dashboard from "./Components/dashboard";
 
-class route extends React.Component {
+class App extends Component {
   render() {
     return (
       <Router>
-        <Switch>
+        <div>
+          <Switch>
           <Route exact path="/">
             <Redirect to="/login" />
           </Route>
-          <Route exact path="/login" component={loginMain} />
-          <Route exact path="/dashboard" component={dashboard} />
-        </Switch>
+            <Route exact path="/login" component={login} />
+            <Route exact path="/dashboard" component={dashboard} />
+          </Switch>
+        </div>
       </Router>
     );
   }
 }
 
-export default route;
+export default App;

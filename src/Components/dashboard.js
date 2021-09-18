@@ -1,17 +1,10 @@
 import React from "react";
-import "./App.css";
+import "../Style/App.css";
 import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -19,6 +12,9 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import InfoIcon from '@mui/icons-material/Info';
 
 
 class dashboard extends React.Component {
@@ -56,10 +52,10 @@ class dashboard extends React.Component {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+         
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+            Welcome
           </Typography>
           <Button color="inherit" onClick={this.logout}>Logout</Button>
         </Toolbar>
@@ -76,15 +72,21 @@ class dashboard extends React.Component {
       }
     > <ListItemButton>
     <ListItemIcon>
-      <SendIcon />
+      <AccountBoxIcon />
     </ListItemIcon>
-    <ListItemText primary="Sent mail" />
+    <ListItemText primary="Profile" />
   </ListItemButton>
   <ListItemButton>
     <ListItemIcon>
-      <DraftsIcon />
+      <ContactPhoneIcon />
     </ListItemIcon>
-    <ListItemText primary="Drafts" />
+    <ListItemText primary="Contact" />
+  </ListItemButton>
+  <ListItemButton>
+    <ListItemIcon>
+      <InfoIcon />
+    </ListItemIcon>
+    <ListItemText primary="About" />
   </ListItemButton></List>
       </div>
     );
