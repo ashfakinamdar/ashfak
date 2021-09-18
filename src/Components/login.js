@@ -54,7 +54,7 @@ class login extends React.Component {
       this.setState({ errorPassword: true });
     }
     if (username.toLocaleLowerCase() === "admin" && password === "1234") {
-      this.props.history.push("./dashboard");
+      this.props.history.replace("./dashboard");
     }
   };
 
