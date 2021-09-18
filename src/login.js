@@ -5,8 +5,9 @@ import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import InputAdornment from "@mui/material/InputAdornment";
+import Grid from '@mui/material/Grid';
 import FormControl from "@mui/material/FormControl";
+
 
 class login extends React.Component {
   constructor(props) {
@@ -55,10 +56,11 @@ class login extends React.Component {
     return (
       <div className="backgound">
         <div className="loginBox">
-          <div className="header">
-            <h1 className="headerText">Welcome</h1>
-            <div className="container">
-              <FormControl>
+        <Grid container>  
+        <Grid item xs={6}>
+        <div className="container">
+        <h1 className="mainText">Login.</h1>
+              <FormControl className="width100">
                 <Stack spacing={5}>
                   {" "}
                   <TextField
@@ -94,7 +96,19 @@ class login extends React.Component {
                 </Stack>
               </FormControl>
             </div>
-          </div>
+        </Grid>
+        <Grid item xs={6} className="gridBackground">
+       <h1 className="loginText">Welcome Back</h1>
+       <h1 className="helperText">New User? Please Create An Account.</h1>
+       <div className="textAlignCenter">
+       <Button variant="contained" className="createAccountButton">
+                    Create Account
+                  </Button></div>
+        </Grid>
+        </Grid>
+        
+           
+          
         </div>
       </div>
     );

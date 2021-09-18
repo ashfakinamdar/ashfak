@@ -1,21 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 .backgound {
-  background-image: url("./Assets/OXavm4.jpg");
+  /* background-image: url("./Assets/OXavm4.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
 }
+.gridBackground {
+  background-image: url("./Assets/OXavm4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .loginBox {
   height: 410px;
   background-color: white;
-  width: 500px;
+  width: 700px;
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 15px;
+
   box-shadow: 0px 10px 34px -15px rgb(0 0 0 / 24%);
 }
 .header {
@@ -38,7 +44,7 @@
   width: 100%;
 }
 .container {
-  padding: 30px 100px;
+  padding: 30px 20px;
 }
 .passwordInput input {
   padding-right: 35px;
@@ -49,5 +55,51 @@
 .passwordView {
   position: absolute;
   right: 8px;
-  top: 72px;
+  top: 29%;
+}
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  height: 16px !important;
+}
+.css-i7rae6-MuiList-root {
+  height: 100vh;
+}
+.MuiGrid-container {
+  height: 100%;
+}
+.loginText {
+  font-family: "Lobster", cursive;
+  color: white;
+  font-size: 40px;
+  margin: 100px 0px 0px 30px;
+}
+.helperText {
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+  font-size: 20px;
+  margin: 10px 10px 0px 30px;
+}
+.textAlignCenter {
+  text-align: center;
+}
+.textAlignCenter .createAccountButton {
+  margin: 30px 0px;
+  background-color: white;
+  color: #0277bd;
+  /* border-color: #0277bd; */
+  border: 1px solid #0277bd;
+}
+.textAlignCenter .createAccountButton:hover,
+.textAlignCenter .createAccountButton:focus {
+  margin: 30px 0px;
+  background-color: #0277bd;
+  color: white;
+  /* border-color: #0277bd; */
+  border: 1px solid white;
+}
+.mainText {
+  color: black;
+  margin: 10px 0px 30px 0px;
+}
+.MuiFormControl-root {
+  width: 100% !important;
 }
