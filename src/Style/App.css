@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-/* 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 */
+/* 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 */
 body {
   margin: 0;
   font-family: "Noto Sans", sans-serif;
@@ -177,3 +177,15 @@ a {
   margin: 30px 45px;
   box-shadow: 0px 6px 40px -1px rgb(0 0 0 / 24%);
 }
+.loyalty {
+  color: #388e3c;
+}
+.supervisor {
+  color: #303f9f;
+}
+.money {
+  color: #e64a19;
+}
+/* .cards {
+  background-image: linear-gradient(to right, #eceff1, #b0bec5);
+} */

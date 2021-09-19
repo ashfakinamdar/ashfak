@@ -23,7 +23,12 @@ import Grid from '@mui/material/Grid';
 import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
+import CardMedia from '@mui/material/CardMedia';
 
 class dashboard extends React.Component {
   constructor(props) {
@@ -34,15 +39,22 @@ class dashboard extends React.Component {
       show: false,
       errorUsername: false,
       errorPassword: false,
+      dialogVisible: false,
+      once: false,
     };
   }
 
   componentDidMount = () => {
-    console.log("dv", this.props);
+    if(this.props && this.props.location && this.props.location.state && this.props.location.state.dailog) {
+      this.setState({dialogVisible: true})
+    }
   };
 
   logout=()=>{
     this.props.history.replace("./login");
+  }
+  handleCloseDialog=()=>{
+    this.setState({dialogVisible:false})
   }
 
   
@@ -103,7 +115,7 @@ class dashboard extends React.Component {
       <Card  className="textAlignCenter cards" >
       <CardContent>
         <div className="flexLogin">
-        <LoyaltyIcon className="dashboardIcons"/>
+        <LoyaltyIcon className="dashboardIcons loyalty"/>
         <h1>Todays Sales</h1>
       </div>
       <h2>30</h2>
@@ -113,7 +125,7 @@ class dashboard extends React.Component {
       <Card  className="textAlignCenter cards" >
       <CardContent>
       <div className="flexLogin">
-        <SupervisedUserCircleIcon  className="dashboardIcons"/>
+        <SupervisedUserCircleIcon  className="dashboardIcons supervisor"/>
       <h1>New Members</h1>
       </div>
       <h2>250+</h2>
@@ -123,13 +135,127 @@ class dashboard extends React.Component {
       <Card  className="textAlignCenter cards" >
       <CardContent>
       <div className="flexLogin">
-        <MonetizationOnIcon  className="dashboardIcons"/>
+        <MonetizationOnIcon  className="dashboardIcons money"/>
       <h1>Total Profit</h1>
       </div>
       <h2>40%</h2>
       </CardContent>
       </Card></Grid>
+      <Dialog
+        open={this.state.dialogVisible}
+        // onClose={this.handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Success"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Hi! You are logged in successfully
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={this.handleCloseDialog}>Ok</Button>
+         
+            
+        </DialogActions>
+      </Dialog>
+      
     </Grid>
+
+
+    <Grid container className="textAlignCenter " rowSpacing={2} columnSpacing={5} className="dashboardPadding">
+      <Grid item xs={4}> 
+      <Card >
+      <CardMedia
+        component="img"
+        height="140"
+        image="https://picsum.photos/id/235/400/300"
+        alt="alternate"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          My Goals
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+      </Grid> 
+      <Grid item xs={4}> 
+      <Card >
+      <CardMedia
+        component="img"
+        height="140"
+        image="https://picsum.photos/id/253/400/300"
+        alt="alternate"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Todays Schedule
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+     </Grid>
+      <Grid item xs={4}> 
+      <Card >
+      <CardMedia
+        component="img"
+        height="140"
+        image="https://picsum.photos/id/299/400/300"
+        alt="alternate"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Timeline
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
+      </Grid>
+      <Dialog
+        open={this.state.dialogVisible}
+        // onClose={this.handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Success"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Hi! You are logged in successfully
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={this.handleCloseDialog}>Ok</Button>
+         
+            
+        </DialogActions>
+      </Dialog>
+      
+    </Grid>
+
+   
  
   </div>
   </div>
